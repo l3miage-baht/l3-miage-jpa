@@ -1,6 +1,7 @@
 package fr.uga.im2ag.l3.miage.db.repository.impl;
 
 import fr.uga.im2ag.l3.miage.db.repository.api.GraduationClassRepository;
+import fr.uga.im2ag.l3.miage.db.model.Grade;
 import fr.uga.im2ag.l3.miage.db.model.GraduationClass;
 
 import javax.persistence.EntityManager;
@@ -31,12 +32,15 @@ public class GraduationClassRepositoryImpl extends BaseRepositoryImpl implements
     @Override
     public GraduationClass findById(Long id) {
         // TODO
-        return null;
+        return entityManager.find(GraduationClass.class, id);
     }
 
     @Override
     public List<GraduationClass> getAll() {
         // TODO
-        return null;
+    	List<GraduationClass> res;
+    	String jpql = "select g from GraduationClass";
+    	res = entityManager.createQuery(jpql, GraduationClass.class).getResultList();
+    	return res;
     }
 }

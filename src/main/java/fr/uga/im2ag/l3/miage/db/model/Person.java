@@ -2,6 +2,16 @@ package fr.uga.im2ag.l3.miage.db.model;
 
 import java.util.Date;
 
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "TYPE_ENTITE")
+@DiscriminatorValue("PERSON")
 public abstract class Person {
 
     private Long id;

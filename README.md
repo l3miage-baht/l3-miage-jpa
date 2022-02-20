@@ -1,3 +1,7 @@
+# Membres
+* BAH Thierno Mamadou Aliou       =>      [11818868]
+* TCHANA TAME Franck  		      =>      [11718422]
+
 # TP JPA
 
 Vous avez deux scéance de TP pour en venir à bout, vous être libre de continuer chez vous.
