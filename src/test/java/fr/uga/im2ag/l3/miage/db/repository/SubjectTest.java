@@ -42,6 +42,19 @@ class SubjectTest extends Base {
     @Test
     void shouldFindTeachersForSubject() {
         // TODO
+//    	final var subject = Fixtures.createSubject();
+//    	final var teacher = Fixtures.createTeacher();
+    	
+//    	entityManager.getTransaction().begin();
+//        subjectRepository.save(subject);
+//        entityManager.getTransaction().commit();
+//        entityManager.detach(subject);
+//        
+//        var pSubject = subjectRepository.findById(subject.getId());
+//        assertThat(pSubject).
+//        
+//    	subjectRepository.findById(null);
+//    	subjectRepository.findById((long)2);
     }
 
 }

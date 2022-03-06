@@ -15,12 +15,14 @@ public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name = "name", unique = true)
+    @Column(unique = true, nullable = false)
     private String name;
     private Integer points;
+    @Column(nullable = false)
     private Float hours;
+    @Column(nullable = false)
     private Date start;
-    @Column(name = "end_date")
+    @Column(name = "end_date", nullable = false)
     private Date end;
 
     public Long getId() {

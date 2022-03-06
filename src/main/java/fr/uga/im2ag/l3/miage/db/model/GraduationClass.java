@@ -3,6 +3,7 @@ package fr.uga.im2ag.l3.miage.db.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +17,12 @@ public class GraduationClass {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+	@Column(nullable = false)
     private String name;
+	@Column(nullable = false)
     private Integer year;
-    @OneToMany(mappedBy = "graduationClass")
+    //@OneToMany(mappedBy = "graduationClass")
+    @OneToMany
     private List<Student> students;
 
     public Long getId() {
